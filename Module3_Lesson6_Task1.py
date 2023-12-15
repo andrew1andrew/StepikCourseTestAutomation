@@ -57,3 +57,4 @@ class TestAliens:
             browser.implicitly_wait(5)
             answer_feedback = browser.find_element(By.CLASS_NAME, 'smart-hints__hint')
             assert answer_feedback.text == "Correct!", "Wrong answer!"
+            # test
