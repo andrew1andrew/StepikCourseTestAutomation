@@ -6,6 +6,7 @@ import math
 from selenium.common.exceptions import NoAlertPresentException
 from selenium.webdriver.support.ui import WebDriverWait as Wait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class BasePage:
@@ -27,6 +28,22 @@ class BasePage:
         try:
             self.browser.find_element(By.CSS_SELECTOR, locator)
         except TimeoutException or NoSuchElementException:
+            return False
+        return True
+
+    '''The test will fail as soon as it sees the element it is looking for. If the element does not appear, the test will be assigned a passed status.'''
+    def is_not_element_present(self, locator_name, timeout=4):
+        try:
+            WebDriverWait(self.browser, timeout).until(EC.presence_of_element_located(locator_name))
+        except TimeoutException:
+            return True
+        return False
+
+    '''Will wait until the element disappears'''
+    def is_disappeared(self, locator_name, timeout=4):
+        try:
+            WebDriverWait(self.browser, timeout, 1, TimeoutException).until_not(EC.presence_of_element_located(locator_name))
+        except TimeoutException:
             return False
         return True
 

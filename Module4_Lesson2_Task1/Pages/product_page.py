@@ -5,7 +5,6 @@ from .locators import ProductPageLocators
 class ProductPage(BasePage):
     def add_product_to_the_shopping_cart(self):
         self.element_is_visible(ProductPageLocators.ADD_TO_THE_SHOPPING_CART).click()
-        self.solve_quiz_and_get_code()
 
     def should_be_add_button(self):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_THE_SHOPPING_CART), "Button is not presented"
@@ -19,5 +18,11 @@ class ProductPage(BasePage):
         assert (bookName.text == bookNameBasket.text) & (
                     bookPrice.text == bookPriceBasket.text), "ERROR: " + errorTextMass
 
-    def should_not_be_success_message(self):
+    def should_be_success_message(self):
         assert self.is_element_present(ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(ProductPageLocators.SUCCESS_MESSAGE), "Success message is presented, but should not be"
+
+    def disappear_of_success_message(self):
+        assert self.is_disappeared(ProductPageLocators.SUCCESS_MESSAGE), "Success message isn't disappear"
