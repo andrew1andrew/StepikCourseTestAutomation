@@ -12,4 +12,4 @@
 Autotests in this project are written in `Python` using `Selenium`.\
 
 <a name="Project"><h2>Project</h2></a>
-<code><a href="https://stepik.org/course/575/promo#toc"> <img src="https://begeton.com/files/users-companies/120/4/5/pbZq6SARkx7xM6vpanYA1ahsypswJYJp.jpeg" style="margin-right:20px" alt="GoogleLogo" width="272" height="92"/>  </p></a></code>Test automation project for the final work for the Stepik educational platform. The application is an <a target="_blank" href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjk7On8jvOAAxVFmFwKHWa3CZQQPAgI">online store</a> selling books.
+<code><a href="https://stepik.org/course/575/promo#toc"> <img src="https://www.pngkit.com/png/full/420-4200860_logo-stepik.png" style="margin-right:20px" alt="GoogleLogo" width="272" height="92"/>  </p></a></code>Test automation project for the final work for the Stepik educational platform. The application is an <a target="_blank" href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwjk7On8jvOAAxVFmFwKHWa3CZQQPAgI">online store</a> selling books.
